@@ -162,6 +162,7 @@
             fetch('/v1/fontColor')
                 .then(response => response.text())  // Parse the response as plain text
                 .then(color => {
+                  console.log(color)
                     // Get all h1 elements
                     const h1Elements = document.querySelectorAll('h1');
 
@@ -177,7 +178,7 @@
             fetch('/v1/fontSize')
                 .then(response => response.text())  // Parse the response as plain text
                 .then(size => {
-                 console.log(size)
+                  console.log(size)
                     // Get all h1 elements
                     const h1Elements = document.querySelectorAll('h1');
 
@@ -191,9 +192,9 @@
 
         // Call the function on page load
         window.onload = function() {
-        console.log("naveen")
-            fetchAndChangeH1Color();
-             fetchAndChangeH1Size();// Fetch and apply the color when the page loads
+          console.log("Flag Values")
+          fetchAndChangeH1Color();
+          fetchAndChangeH1Size();// Fetch and apply the color when the page loads
         };
     </script>
 
