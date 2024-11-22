@@ -1,0 +1,5 @@
+apiVersion: v2
+name: spring-petclinic
+description: A helm chart for spring petclinic app
+type: application
+version: 0.1.0

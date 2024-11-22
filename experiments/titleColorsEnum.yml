@@ -1,0 +1,13 @@
+# This file was edited by CloudBees Feature Management
+type: experiment
+flag: titleColorsEnum
+availableValues:
+  - YELLOW
+  - GREEN
+  - BLUE
+  - WHITE
+platforms:
+  - name: Browser
+  - name: Java
+    value: WHITE
+value: WHITE

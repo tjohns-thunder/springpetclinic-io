@@ -1,0 +1,16 @@
+# This file was edited by CloudBees Feature Management
+type: experiment
+flag: titleColors
+availableValues:
+  - Yellow
+  - Green
+  - Blue
+  - White
+platforms:
+  - name: Browser
+  - name: Java
+conditions:
+  - group:
+      name: petclinic-target group
+    value: White
+value: White

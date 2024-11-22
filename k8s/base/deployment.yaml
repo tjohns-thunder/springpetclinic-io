@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-petclinic
+  labels:
+    app: spring-petclinic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-petclinic
+  template:
+    metadata:
+      name: spring-petclinic
+      labels:
+        app: spring-petclinic
+    spec:
+      containers:
+        - name: spring-petclinic
+          image: caannamalai/springpetclinic
+          imagePullPolicy: Always
+          envFrom:
+            - configMapRef:
+                name: ho-cm
+          ports:
+            - containerPort: 80
+              protocol: TCP
+      restartPolicy: Always

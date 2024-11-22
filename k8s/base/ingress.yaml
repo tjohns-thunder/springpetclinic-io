@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spring-petclinic
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: spring-petclinic.preview.cb-demos.io #append prefix for each SE environment to make unique
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: spring-petclinic
+                port:
+                  number: 80
+  tls:
+    - hosts:
+        - spring-petclinic.preview.cb-demos.io #append prefix for each SE environment to make unique
+      secretName: ho-tls

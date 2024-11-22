@@ -1,0 +1,13 @@
+# This file was edited by CloudBees Feature Management
+type: experiment
+flag: titleSize
+availableValues:
+  - 24
+  - 18
+  - 14
+  - 3.5rem
+platforms:
+  - name: Browser
+  - name: Java
+    value: 14
+value: 14
