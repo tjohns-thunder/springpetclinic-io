@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 env:
   APP_NAME: spring-petclinic
-  NAMESPACE: snaqvi
+  NAMESPACE: change-me #This will be changed to the SE's personal namespace
 jobs:
   evidence-collection:
     outputs:
@@ -234,7 +234,7 @@ jobs:
     needs: 
       - deploy_dev
   deploy_dev:
-    environment: snaqvi_DEV
+    environment: change-me_DEV #This will be changed to SE's created DEV environment ex: tjohns_DEV
     steps:
       - name: Checkout
         uses: cloudbees-io/checkout@v1
@@ -267,7 +267,7 @@ jobs:
     needs:
       - container-scan
   deploy_qa:
-    environment: snaqvi_QA
+    environment: change-me_QA #This will be changed to SE's created QA environment ex: tjohns_QA
     steps:
       - name: Checkout
         uses: cloudbees-io/checkout@v1
@@ -315,7 +315,7 @@ jobs:
     needs: 
       - deploy_qa
   deploy_prod:
-    environment: snaqvi_PROD
+    environment: change-me_PROD #This will be changed to SE's created PROD environment ex: tjohns_PROD
     steps:
       - name: Checkout
         uses: cloudbees-io/checkout@v1
