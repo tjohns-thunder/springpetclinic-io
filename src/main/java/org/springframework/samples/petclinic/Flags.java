@@ -7,7 +7,7 @@ public class Flags implements RoxContainer {
 
 	public RoxFlag enableTutorial = new RoxFlag(false);
 
-	public final RoxString titleColors = new RoxString("White", new String[] { "White", "Blue", "Green", "Yellow" });
+	public final RoxString titleColors = new RoxString("Blue", new String[] { "White", "Blue", "Green", "Yellow" });
 
 	public final RoxString shozabColors = new RoxString("White", new String[] { "White", "Blue", "Green", "Yellow" });
 
