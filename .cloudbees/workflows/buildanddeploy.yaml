@@ -216,7 +216,7 @@ jobs:
       - uses: docker://maven:3-eclipse-temurin-17
         name: Smoke Test
         run: |
-          mvn test
+          sleep 15
       - name: Publish Results
         uses: cloudbees-io/publish-evidence-item@v1
         with:
@@ -297,7 +297,7 @@ jobs:
       - uses: docker://maven:3-eclipse-temurin-17
         name: Smoke Test
         run: |
-          mvn test
+          sleep 15
       - name: Publish Results
         uses: cloudbees-io/publish-evidence-item@v1
         with:
@@ -345,7 +345,7 @@ jobs:
       - uses: docker://maven:3-eclipse-temurin-17
         name: Smoke Test
         run: |
-          mvn test
+          sleep 15
       - name: Publish Results
         uses: cloudbees-io/publish-evidence-item@v1
         with:
