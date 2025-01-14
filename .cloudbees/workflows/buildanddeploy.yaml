@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 env:
   APP_NAME: spring-petclinic
-  NAMESPACE: tjohnson #This will be changed to the SE's personal namespace
+  NAMESPACE: tjohnson #This will be changed to the SE's personal namespace.
 jobs:
   evidence-collection:
     outputs:
